@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WeekCalendar">
+        <attr name="wc_startTimeSeconds" format="integer" />
+        <attr name="wc_borderRes" format="reference" />
+        <attr name="wc_textColor" format="color" />
+        <attr name="wc_isScrollable" format="boolean" />
+        <attr name="wc_isItemTouchable" format="boolean" />
+    </declare-styleable>
+</resources>
