@@ -4,6 +4,7 @@
         <attr name="wc_startTimeSeconds" format="integer" />
         <attr name="wc_borderRes" format="reference" />
         <attr name="wc_textColor" format="color" />
+        <attr name="wc_focusedTextColor" format="color" />
         <attr name="wc_isScrollable" format="boolean" />
         <attr name="wc_isItemTouchable" format="boolean" />
     </declare-styleable>

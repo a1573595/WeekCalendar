@@ -27,7 +27,10 @@ class WeekCalendar @JvmOverloads constructor(
     private var _borderResource: Int = R.drawable.oval_gray
 
     @ColorInt
-    private var _textColor = Color.WHITE
+    private var _textColor = Color.BLACK
+
+    @ColorInt
+    private var _focusedTextColor = Color.WHITE
 
     var isScrollable = true
 
@@ -56,7 +59,7 @@ class WeekCalendar @JvmOverloads constructor(
         binding.recyclerView.layoutManager = linearLayoutManager
         binding.recyclerView.setHasFixedSize(true)
 
-        weekAdapter = WeekAdapter(_startTimeSeconds, _borderResource, _textColor)
+        weekAdapter = WeekAdapter(_startTimeSeconds, _borderResource, _textColor, _focusedTextColor)
         binding.recyclerView.adapter = weekAdapter
 
         binding.recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
@@ -107,6 +110,10 @@ class WeekCalendar @JvmOverloads constructor(
             _textColor = it.getColor(
                 R.styleable.WeekCalendar_wc_textColor,
                 _textColor
+            )
+            _focusedTextColor = it.getColor(
+                R.styleable.WeekCalendar_wc_focusedTextColor,
+                _focusedTextColor
             )
             isScrollable = it.getBoolean(
                 R.styleable.WeekCalendar_wc_isScrollable,

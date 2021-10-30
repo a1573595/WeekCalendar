@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:text="Touchable" />
+        android:text="ItemTouchable" />
 
     <com.a1573595.weekcalendar.WeekCalendar
         android:layout_width="match_parent"
@@ -37,11 +37,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         app:wc_borderRes="@drawable/star"
+        app:wc_focusedTextColor="@android:color/holo_red_light"
         app:wc_textColor="@android:color/holo_red_light" />
 
     <com.a1573595.weekcalendar.WeekCalendar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        app:wc_startTimeSeconds="1577808000"/>
+        app:wc_startTimeSeconds="1577808000" />
 </LinearLayout>

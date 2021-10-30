@@ -1,6 +1,5 @@
 package com.a1573595.weekcalendar
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,7 +11,8 @@ import kotlin.collections.ArrayList
 class WeekAdapter(
     startTimeSeconds: Int,
     private val _borderResource: Int,
-    private val _textColor: Int
+    private val _textColor: Int,
+    private val _focusedTextColor: Int
 ) :
     RecyclerView.Adapter<WeekAdapter.DayHolder>() {
     companion object {
@@ -33,7 +33,6 @@ class WeekAdapter(
 
     init {
         calendar.timeInMillis = startTimeSeconds.toLong() * 1000
-//        calendar.add(Calendar.DAY_OF_MONTH, -(numberOfDaysInWeek - 1))
 
         repeat((0 until numberOfDaysInWeek * 2).count()) {
 //            val offset: Long =
@@ -77,11 +76,12 @@ class WeekAdapter(
 
             if (lastPosition == position) {
                 binding.tvDay.setBackgroundResource(_borderResource)
-                binding.tvDay.setTextColor(_textColor)
+                binding.tvDay.setTextColor(_focusedTextColor)
             } else {
                 binding.tvDay.setBackgroundResource(0)
-                binding.tvDay.setTextColor(Color.BLACK)
+                binding.tvDay.setTextColor(_textColor)
             }
+            binding.tvMonth.setTextColor(_textColor)
         }
     }
 
