@@ -45,3 +45,13 @@ binding.weekCalendar.setOnSelectedListener {
 	...
 }
 ```
+
+## 屬性
+| 屬性 | 類型 | 默認值 | 說明 |
+| :------| :------ | :------ | :------ |
+| wc_startTimeSeconds | integer | System.currentTimeMillis() / 1000 | 開始時間 |
+| wc_borderRes | reference | R.drawable.oval_gray | 邊框圖示資源 |
+| wc_textColor | color | #000000 | 文字顏色 |
+| wc_focusedTextColor | color | #ffffff | 選擇文字顏色 |
+| wc_isScrollable | boolean | true | 可否滾動 |
+| wc_isItemTouchable | boolean | true | 可否點擊 |

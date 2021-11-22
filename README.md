@@ -45,3 +45,13 @@ binding.weekCalendar.setOnSelectedListener {
 	...
 }
 ```
+
+## Attribute
+| Attribute | Type | Default | Description |
+| :------| :------ | :------ | :------ |
+| wc_startTimeSeconds | integer | System.currentTimeMillis() / 1000 | start time |
+| wc_borderRes | reference | R.drawable.oval_gray | border icon resource |
+| wc_textColor | color | #000000 | text color |
+| wc_focusedTextColor | color | #ffffff | focused text color |
+| wc_isScrollable | boolean | true | scrollable |
+| wc_isItemTouchable | boolean | true | item touchable |

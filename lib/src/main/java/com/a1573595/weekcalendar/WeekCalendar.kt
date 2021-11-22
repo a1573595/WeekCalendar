@@ -50,6 +50,7 @@ class WeekCalendar @JvmOverloads constructor(
                 return false
             }
         }
+
     private val weekAdapter: WeekAdapter
 
     init {
